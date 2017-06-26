@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('dans', 'DanController');
+Route::any('dans/create', 'DanController@create');
+Route::post('dans/create', 'DanController@store');
+Route::post('dans/store', 'DanController@store');
